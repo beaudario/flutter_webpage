@@ -10,9 +10,49 @@ class Navbar extends StatelessWidget {
         } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
           return DesktopNavbar();
         } else {
-          return MobileNavnar();
+          return MobileNavbar();
         }
       },
     );
+  }
+}
+
+class DesktopNavbar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        children: <Widget>[
+          Text(
+            'RetroPortal Studio',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 30),
+          ),
+          Row(
+            children: <Widget>[
+              Text(
+                'Home',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'About Us',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'Portfolio',
+                style: TextStyle(color: Colors.white),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class MobileNavbar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
