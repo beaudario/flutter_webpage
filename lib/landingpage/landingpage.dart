@@ -12,9 +12,24 @@ class LandingPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 40.0,
                     color: Colors.white)),
-            Text(
-              'We have taken each and every project handed over to us as a challenge, which helped us achieve a high project success rate',
-              style: TextStyle(fontSize: 16.0, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: Text(
+                'We have taken each and every project handed over to us as a challenge, which helped us achieve a high project success rate',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+              ),
+            ),
+            MaterialButton(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0))),
+              onPressed: () {},
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 20.0, horizontal: 40.0),
+                child:
+                    Text('Our Packages', style: TextStyle(color: Colors.red)),
+              ),
             )
           ],
         ),
@@ -32,7 +47,7 @@ class LandingPage extends StatelessWidget {
             children: pageChildren(),
           );
         } else {
-          return pageChildren();
+          return Column(children: pageChildren());
         }
       },
     );
